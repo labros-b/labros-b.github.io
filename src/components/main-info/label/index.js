@@ -10,7 +10,7 @@ class Label extends Component {
         className="label-component label"
         // onClick={() => { window.open('https://foqum.io') }}
       >
-        Senior Front End Engineer
+        Senior Software Engineer
       </div>
     );
   }

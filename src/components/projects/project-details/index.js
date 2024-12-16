@@ -47,6 +47,7 @@ class ProjectsDetails extends Component {
     animation: null,
     title: "My Projects",
     content: [
+      `Temporarily outdated - please check my GitHub profile`,
       `Here you can see examples of my work and personal projects!`,
       `In the personal projects you can also see the source code while some
       of them you can see them on video or try them yourself.`,
