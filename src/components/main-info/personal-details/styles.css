@@ -1,0 +1,49 @@
+.personal-details p {
+  line-height: 20px;
+}
+
+.personal-details p span:first-child {
+  margin-left: 15px;
+  width: 95px;
+  display: inline-block;
+}
+
+.personal-details a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 880px) {
+  .personal-details {
+    display: flex;
+  }
+  .personal-details p span:first-child {
+    margin-left: 0;
+  }
+  .personal-details p span  {
+    margin: auto;
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 436px) {
+  .personal-details p span {
+    margin-right: 25px;
+  }
+  .personal-details p span:first-child {
+    width: auto;
+  }
+}
+@media (max-width: 390px) {
+  .personal-details p span {
+    margin-right: 1px;
+  }
+  .personal-details p:last-child {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .personal-details p span.email a {
+    overflow: hidden;
+
+  }
+}

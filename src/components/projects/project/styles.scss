@@ -1,0 +1,295 @@
+@import url(https://fonts.googleapis.com/css?family=Chilanka);
+.space-bubble {
+  border-radius: 50%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+}
+.space-bubble:after {
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 );
+  border-radius: 50%;
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+  content: "";
+  position: absolute;
+}
+.bubble-content {
+  font-family: Chilanka;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+$first-size: 170px;
+$second-size: 110px;
+$third-size: 150px;
+$forth-size: 108px;
+$fifth-size: 145px;
+$sixth-size: 150px;
+$seventh-size: 155px;
+$eighth-size: 142px;
+
+// 1st
+.space-bubble:nth-of-type(2) {
+  height: $first-size;
+  width: $first-size;
+  top: 13%;
+  left: 5.5%;
+}
+.space-bubble:nth-of-type(2):after {
+  height: calc(#{$first-size} - #{$first-size} * 0.06);
+  width: calc(#{$first-size} - #{$first-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+// 2nd
+.space-bubble:nth-of-type(3) {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), inset 0px 5px 20px 5px rgba(255, 255, 255, 1);
+  height: $second-size;
+  width: $second-size;
+  top: 30%;
+  left: 26%;
+
+  .bubble-content {
+    font-size: 11.5px;
+  }
+}
+.space-bubble:nth-of-type(3):after {
+  height: calc(#{$second-size} - #{$second-size} * 0.06);
+  width: calc(#{$second-size} - #{$second-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+// 3nd
+.space-bubble:nth-of-type(4) {
+  height: $third-size;
+  width: $third-size;
+  top: 7.5%;
+  left: 0; right: 0;
+  margin: auto;
+  .bubble-content {
+    font-size: 16px;
+  }
+}
+.space-bubble:nth-of-type(4):after {
+  height: calc(#{$third-size} - #{$third-size} * 0.06);
+  width: calc(#{$third-size} - #{$third-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+// 4th
+.space-bubble:nth-of-type(5) {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), inset 0px 5px 20px 5px rgba(255, 255, 255, 1);
+  height: $forth-size;
+  width: $forth-size;
+  top: 30%;
+  right: 26%;
+
+  .bubble-content {
+    font-size: 11.5px;
+  }
+}
+.space-bubble:nth-of-type(5):after {
+  height: calc(#{$forth-size} - #{$forth-size} * 0.06);
+  width: calc(#{$forth-size} - #{$forth-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+// 5th
+.space-bubble:nth-of-type(6) {
+  height: $fifth-size;
+  width: $fifth-size;
+  top: 13%;
+  right: 5.5%;
+  .bubble-content {
+    font-size: 16px;
+  }
+}
+.space-bubble:nth-of-type(6):after {
+  height: calc(#{$fifth-size} - #{$fifth-size} * 0.06);
+  width: calc(#{$fifth-size} - #{$fifth-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+// 6th
+.space-bubble:nth-of-type(7) {
+  height: $sixth-size;
+  width: $sixth-size;
+  bottom: 13%;
+  right: 7.5%;
+  .bubble-content {
+    font-size: 17px;
+  }
+}
+.space-bubble:nth-of-type(7):after {
+  height: calc(#{$sixth-size} - #{$sixth-size} * 0.06);
+  width: calc(#{$sixth-size} - #{$sixth-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+// 7th
+.space-bubble:nth-of-type(8) {
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.2), inset 0px 6px 25px 5px rgba(255, 255, 255, 1);
+  height: $seventh-size;
+  width: $seventh-size;
+  bottom: 8.5%;
+  left: 0; right: 0;
+  margin: auto;
+  .bubble-content {
+    font-size: 16.5px;
+  }
+}
+.space-bubble:nth-of-type(8):after {
+  height: calc(#{$seventh-size} - #{$seventh-size} * 0.06);
+  width: calc(#{$seventh-size} - #{$seventh-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+// 8th
+.space-bubble:nth-of-type(9) {
+  height: $eighth-size;
+  width: $eighth-size;
+  bottom: 13%;
+  left: 7.5%;
+  .bubble-content {
+    font-size: 15px;
+  }
+}
+.space-bubble:nth-of-type(9):after {
+  height: calc(#{$eighth-size} - #{$eighth-size} * 0.06);
+  width: calc(#{$eighth-size} - #{$eighth-size} * 0.06);
+  top: 4px;
+  left: 4px;
+}
+
+$first-size-resp: $first-size * 0.8;
+$second-size-resp: $second-size * 0.8;
+$third-size-resp: $third-size * 0.8;
+$forth-size-resp: $forth-size * 0.8;
+$fifth-size-resp: $fifth-size * 0.8;
+$sixth-size-resp: $sixth-size * 0.8;
+$seventh-size-resp: $seventh-size * 0.8;
+$eighth-size-resp: $eighth-size * 0.8;
+
+
+@media (max-width: 860px) {
+  .bubble-content {
+    font-size: 14.5px;
+    margin-top: 6px;
+  }
+  .space-bubble:nth-of-type(2) {
+    height: $first-size-resp;
+    width: $first-size-resp;
+  }
+  .space-bubble:nth-of-type(3) {
+    height: $second-size-resp;
+    width: $second-size-resp;
+    .bubble-content {
+      font-size: 10px;
+    }
+  }
+  .space-bubble:nth-of-type(4) {
+    height: $third-size-resp;
+    width: $third-size-resp;
+    .bubble-content {
+      font-size: 13px;
+    }
+  }
+  .space-bubble:nth-of-type(5) {
+    height: $forth-size-resp;
+    width: $forth-size-resp;
+  }
+  .space-bubble:nth-of-type(6) {
+    height: $fifth-size-resp;
+    width: $fifth-size-resp;
+    .bubble-content {
+      font-size: 15px;
+    }
+  }
+  .space-bubble:nth-of-type(7) {
+    height: $sixth-size-resp;
+    width: $sixth-size-resp;
+    .bubble-content {
+      font-size: 13px;
+    }
+  }
+  .space-bubble:nth-of-type(8) {
+    height: $seventh-size-resp;
+    width: $seventh-size-resp;
+    .bubble-content {
+      font-size: 15px;
+    }
+  }
+  .space-bubble:nth-of-type(9) {
+    height: $eighth-size-resp;
+    width: $eighth-size-resp;
+    .bubble-content {
+      font-size: 15px;
+    }
+  }
+  .space-bubble:nth-of-type(2):after {
+    height: calc(#{$first-size-resp} - #{$first-size-resp} * 0.06);
+    width: calc(#{$first-size-resp} - #{$first-size-resp} * 0.06);
+  }
+  .space-bubble:nth-of-type(3):after {
+    height: calc(#{$second-size-resp} - #{$second-size-resp} * 0.06);
+    width: calc(#{$second-size-resp} - #{$second-size-resp} * 0.06);
+  }
+  .space-bubble:nth-of-type(4):after {
+    height: calc(#{$third-size-resp} - #{$third-size-resp} * 0.06);
+    width: calc(#{$third-size-resp} - #{$third-size-resp} * 0.06);
+  }
+  .space-bubble:nth-of-type(5):after {
+    height: calc(#{$forth-size-resp} - #{$forth-size-resp} * 0.06);
+    width: calc(#{$forth-size-resp} - #{$forth-size-resp} * 0.06);
+  }
+  .space-bubble:nth-of-type(6):after {
+    height: calc(#{$fifth-size-resp} - #{$fifth-size-resp} * 0.06);
+    width: calc(#{$fifth-size-resp} - #{$fifth-size-resp} * 0.06);
+  }
+  .space-bubble:nth-of-type(7):after {
+    height: calc(#{$sixth-size-resp} - #{$sixth-size-resp} * 0.06);
+    width: calc(#{$sixth-size-resp} - #{$sixth-size-resp} * 0.06);
+  }
+  .space-bubble:nth-of-type(8):after {
+    height: calc(#{$seventh-size-resp} - #{$seventh-size-resp} * 0.06);
+    width: calc(#{$seventh-size-resp} - #{$seventh-size-resp} * 0.06);
+  }
+  .space-bubble:nth-of-type(9):after {
+    height: calc(#{$eighth-size-resp} - #{$eighth-size-resp} * 0.06);
+    width: calc(#{$eighth-size-resp} - #{$eighth-size-resp} * 0.06);
+  }
+}
+
+@media (max-width: 670px) {
+  .space-bubble:nth-of-type(3) {
+    top: 40%;
+    left: 27.8%;
+  }
+  .space-bubble:nth-of-type(5) {
+    top: 40%;
+    right: 27.8%;
+  }
+}
+
+@media (max-width: 460px) {
+  .space-bubble {
+    position: static;
+    border-radius: 0;
+    height: 60px !important;
+    width: 100% !important;
+    margin: 3px 0 !important;
+  }
+  .space-bubble:after {
+    display: none !important;
+  }
+}

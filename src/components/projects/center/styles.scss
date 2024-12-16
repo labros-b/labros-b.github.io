@@ -1,0 +1,75 @@
+$singularity-position: 45%;
+$singularity-size: 48px;
+$vortex-size: 75px;
+
+.singularityContainer {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  margin: auto;
+  transform: scaleY(0.48);
+}
+.singularity {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  margin: auto;
+  width: calc(#{$singularity-size});
+  height: calc(#{$singularity-size});
+  border-radius: 50%;
+  background: radial-gradient(#000000, #1e1f1e);
+  box-shadow: 1px 1px 10px rgba(255,255,255, 0.2);
+}
+
+.vortex {
+  background-image: url('../../../assets/backgrounds/background-space.jpg');
+  background-size: 100vw 100vh;
+  background-position: center center;
+  border-radius: 50%;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  filter: blur(1px);
+  opacity: 0.75;
+}
+
+.vortex-1 {
+  width: $vortex-size;
+  height: $vortex-size;
+  // animation: animate 1.4s linear infinite;
+}
+
+.vortex-2 {
+  width: calc(#{$vortex-size} + 20px);
+  height: calc(#{$vortex-size} + 20px);
+  animation: animateRev 0.9s linear infinite;
+}
+.vortex-3 {
+  width: calc(#{$vortex-size} + 60px);
+  height: calc(#{$vortex-size} + 60px);
+  animation: animate 1.4s linear infinite;
+}
+
+@media (max-width: 670px) {
+  .singularityContainer {
+    display: none;
+  }
+}
+
+@keyframes animate{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateRev{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

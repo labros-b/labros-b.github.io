@@ -1,0 +1,32 @@
+.my-social {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.my-social img {
+  width: 103.5px;
+  height: 103.5px;
+  cursor: pointer;
+}
+@media (max-width: 590px) {
+  .my-social img {
+    width: 82px;
+    height: 82px;
+  }
+}
+@media (max-width: 436px) {
+  .my-social img {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media (max-width: 380px) {
+  .my-social img {
+    width: 65px;
+    height: 65px;
+  }
+}
+.my-social img:hover {
+  opacity: 0.9;
+}

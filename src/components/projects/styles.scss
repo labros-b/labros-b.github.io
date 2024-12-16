@@ -1,0 +1,17 @@
+.projects-page {
+  background-image: url('../../assets/backgrounds/background-space.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-position: center center;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+@media (max-width: 670px) {
+  .projects-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

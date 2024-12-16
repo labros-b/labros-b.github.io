@@ -1,0 +1,240 @@
+.personal-info-page {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 28%;
+  height: 110vh;
+  color: white;
+  position: relative;
+  .overlay {
+    background-color: rgba(0,0,0, 0.6);
+    background-size: cover;
+    height: 110vh;
+    width: 100%;
+  }
+  .info-container {
+    height: 50%;
+    max-width: 760px;
+    margin: auto;
+    display: none;
+    .info-content {
+      max-width: 520px;
+      margin-top: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      p {
+        text-align: left;
+        font-size: 13.6px;
+        font-weight: 300;
+        color: #D5E6E7;
+        margin: 12px 0;
+        z-index: 200;
+      }
+    }
+  }
+  .toggleIn-info {
+    display: flex;
+    animation: fadeIn 3s ease;
+  }
+  .cards-field {
+    display: flex;
+    justify-content: space-between;
+    width: 760px;
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .figure {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 120px;
+      height: 200px;
+      position: absolute;
+      bottom: calc(8% + 180px);
+      z-index: 100;
+    }
+  }
+  .bottom-curve {
+    background-image: url('../../assets/backgrounds/bottom-curve.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 27%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+  }
+}
+// Skills & Career exclusive
+.career-info-page {
+  background-image: url('../../assets/backgrounds/background-space.jpg');
+  .info-container {
+    justify-content: flex-end;
+  }
+  .cloud {
+    width: 180px;
+    height: 160px;
+    position: absolute;
+    bottom: calc(8% + 350px);
+    left: -110px;
+  }
+  .figure {
+    background-image: url('../../assets/geek-boy-pointing.png');
+    left: 42px;
+  }
+}
+// Studies exclusive
+.studies-info-page {
+  background-image: url('../../assets/backgrounds/background-university.jpg');
+  .overlay {
+    background-color: rgba(0,0,0, 0.4);
+  }
+  .info-container {
+    justify-content: flex-start;
+    .info-content {
+      background-color: rgba(82, 51, 41, 0.98);
+      box-shadow: 0px 0px 2px rgba(0,0,0, 0.6);
+      padding: 20px;
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
+  .cards-field {
+    .figure {
+      background-image: url('../../assets/geek-boy-pointing-rev.png');
+      right: 40px;
+      bottom: calc(8% + 260px);
+    }
+  }
+  .toggleIn-info {
+    animation: fadeIn 2s ease;
+  }
+}
+// Interests exclusive
+.interests-info-page {
+  background-image: url('../../assets/backgrounds/background-auroras.jpg');
+  .info-container {
+    justify-content: flex-start;
+  }
+  .figure {
+    background-image: url('../../assets/geek-boy-pointing-rev.png');
+    right: 40px;
+  }
+}
+
+// Figure animations
+.figure.moveDown { animation: moveDown 0.5s ease; }
+.figure.moveUp { animation: moveDown 0.5s ease alternate-reverse; }
+.figure.grow { animation: grow 0.5s ease; }
+.figure.shrink { animation: shrink 0.5s ease; }
+
+@media screen and (max-width: 770px) {
+  .personal-info-page {
+    .hiddenField {
+      width: 210px;
+      height: 100px;
+    }
+    .info-container {
+      .info-content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    .cards-field {
+      width: 100%;
+    }
+  }
+  .studies-info-page {
+    .info-container {
+      flex-direction: row-reverse;
+    }
+  }
+  .interests-info-page {
+    .info-container {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .personal-info-page {
+    .cards-field {
+      .figure {
+        width: 84px;
+        height: 140px;
+        bottom: calc(8% + 145px);
+      }
+    }
+  }
+  .career-info-page {
+    .cards-field {
+      .figure {
+        left: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px),
+       screen and (max-height: 620px) {
+  .personal-info-page {
+    .hiddenField {
+      display: none;
+    }
+    .info-container {
+      padding-top: 10%;
+      .info-content {
+        width: 94%;
+        margin: auto;
+      }
+    }
+    .cards-field {
+      .figure {
+        display: none;
+      }
+    }
+    .cards-field {
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 200px;
+      bottom: 30px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes moveDown {
+  0% { bottom: calc(8% + 260px); }
+  100% { bottom: calc(8% + 180px); }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    filter: blur(8px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(0);
+    filter: blur(8px);
+  }
+}
